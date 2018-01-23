@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C00F88FC2016A23100EF77C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C00F88FB2016A23100EF77C0 /* Assets.xcassets */; };
+		C0A27CA82013510C00F5B94F /* QueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A27CA72013510C00F5B94F /* QueryService.swift */; };
+		C0A27CAD2013E99A00F5B94F /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A27CAC2013E99A00F5B94F /* CoinModel.swift */; };
 		C0FEE1812012ACE900D56C99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FEE1802012ACE900D56C99 /* AppDelegate.swift */; };
 		C0FEE1832012ACE900D56C99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FEE1822012ACE900D56C99 /* ViewController.swift */; };
 		C0FEE1862012ACE900D56C99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0FEE1842012ACE900D56C99 /* Main.storyboard */; };
-		C0FEE1882012ACE900D56C99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0FEE1872012ACE900D56C99 /* Assets.xcassets */; };
 		C0FEE18B2012ACE900D56C99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0FEE1892012ACE900D56C99 /* LaunchScreen.storyboard */; };
 		C0FEE1962012ACE900D56C99 /* neoNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FEE1952012ACE900D56C99 /* neoNetworkTests.swift */; };
 		C0FEE1A12012ACE900D56C99 /* neoNetworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FEE1A02012ACE900D56C99 /* neoNetworkUITests.swift */; };
+		C0FEE1AF2012CCDD00D56C99 /* Podfile in Sources */ = {isa = PBXBuildFile; fileRef = C0FEE1AE2012CCDD00D56C99 /* Podfile */; };
+		DB1BA980722C19F998FC1CE5 /* Pods_neoNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1569A03B4695DEDD7BE51264 /* Pods_neoNetwork.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,11 +38,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1569A03B4695DEDD7BE51264 /* Pods_neoNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_neoNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C00F88FB2016A23100EF77C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C0A27CA72013510C00F5B94F /* QueryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryService.swift; sourceTree = "<group>"; };
+		C0A27CAC2013E99A00F5B94F /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
 		C0FEE17D2012ACE900D56C99 /* neoNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = neoNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0FEE1802012ACE900D56C99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0FEE1822012ACE900D56C99 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C0FEE1852012ACE900D56C99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C0FEE1872012ACE900D56C99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0FEE18A2012ACE900D56C99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C0FEE18C2012ACE900D56C99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0FEE1912012ACE900D56C99 /* neoNetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = neoNetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +54,9 @@
 		C0FEE19C2012ACE900D56C99 /* neoNetworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = neoNetworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0FEE1A02012ACE900D56C99 /* neoNetworkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = neoNetworkUITests.swift; sourceTree = "<group>"; };
 		C0FEE1A22012ACE900D56C99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0FEE1AE2012CCDD00D56C99 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		DD496FFCB384F677E92B39A1 /* Pods-neoNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-neoNetwork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-neoNetwork/Pods-neoNetwork.debug.xcconfig"; sourceTree = "<group>"; };
+		F276EAE94A61FFC2E3438F0A /* Pods-neoNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-neoNetwork.release.xcconfig"; path = "Pods/Target Support Files/Pods-neoNetwork/Pods-neoNetwork.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB1BA980722C19F998FC1CE5 /* Pods_neoNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,13 +85,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		897EB1AF80469895380D10E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1569A03B4695DEDD7BE51264 /* Pods_neoNetwork.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C0A27CA6201350FA00F5B94F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C0A27CA72013510C00F5B94F /* QueryService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		C0A27CA92013E74C00F5B94F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C0A27CAC2013E99A00F5B94F /* CoinModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C0FEE1742012ACE900D56C99 = {
 			isa = PBXGroup;
 			children = (
+				C0FEE1AE2012CCDD00D56C99 /* Podfile */,
 				C0FEE17F2012ACE900D56C99 /* neoNetwork */,
 				C0FEE1942012ACE900D56C99 /* neoNetworkTests */,
 				C0FEE19F2012ACE900D56C99 /* neoNetworkUITests */,
 				C0FEE17E2012ACE900D56C99 /* Products */,
+				E7C4052DEEC20E41FF92E0D5 /* Pods */,
+				897EB1AF80469895380D10E7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,10 +135,12 @@
 		C0FEE17F2012ACE900D56C99 /* neoNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				C00F88FB2016A23100EF77C0 /* Assets.xcassets */,
+				C0A27CA92013E74C00F5B94F /* Model */,
+				C0A27CA6201350FA00F5B94F /* Networking */,
 				C0FEE1802012ACE900D56C99 /* AppDelegate.swift */,
 				C0FEE1822012ACE900D56C99 /* ViewController.swift */,
 				C0FEE1842012ACE900D56C99 /* Main.storyboard */,
-				C0FEE1872012ACE900D56C99 /* Assets.xcassets */,
 				C0FEE1892012ACE900D56C99 /* LaunchScreen.storyboard */,
 				C0FEE18C2012ACE900D56C99 /* Info.plist */,
 			);
@@ -125,6 +165,15 @@
 			path = neoNetworkUITests;
 			sourceTree = "<group>";
 		};
+		E7C4052DEEC20E41FF92E0D5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DD496FFCB384F677E92B39A1 /* Pods-neoNetwork.debug.xcconfig */,
+				F276EAE94A61FFC2E3438F0A /* Pods-neoNetwork.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C0FEE1A52012ACE900D56C99 /* Build configuration list for PBXNativeTarget "neoNetwork" */;
 			buildPhases = (
+				CDDE36C1B542A98D26B4BF08 /* [CP] Check Pods Manifest.lock */,
 				C0FEE1792012ACE900D56C99 /* Sources */,
 				C0FEE17A2012ACE900D56C99 /* Frameworks */,
 				C0FEE17B2012ACE900D56C99 /* Resources */,
+				B9A6DDE493415D71D7B138BA /* [CP] Embed Pods Frameworks */,
+				F257E915EB8A88E519F9AE5A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -233,7 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0FEE18B2012ACE900D56C99 /* LaunchScreen.storyboard in Resources */,
-				C0FEE1882012ACE900D56C99 /* Assets.xcassets in Resources */,
+				C00F88FC2016A23100EF77C0 /* Assets.xcassets in Resources */,
 				C0FEE1862012ACE900D56C99 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,11 +306,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B9A6DDE493415D71D7B138BA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-neoNetwork/Pods-neoNetwork-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-neoNetwork/Pods-neoNetwork-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDDE36C1B542A98D26B4BF08 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-neoNetwork-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F257E915EB8A88E519F9AE5A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-neoNetwork/Pods-neoNetwork-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C0FEE1792012ACE900D56C99 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0A27CAD2013E99A00F5B94F /* CoinModel.swift in Sources */,
+				C0A27CA82013510C00F5B94F /* QueryService.swift in Sources */,
+				C0FEE1AF2012CCDD00D56C99 /* Podfile in Sources */,
 				C0FEE1832012ACE900D56C99 /* ViewController.swift in Sources */,
 				C0FEE1812012ACE900D56C99 /* AppDelegate.swift in Sources */,
 			);
@@ -424,6 +533,7 @@
 		};
 		C0FEE1A62012ACE900D56C99 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD496FFCB384F677E92B39A1 /* Pods-neoNetwork.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -439,6 +549,7 @@
 		};
 		C0FEE1A72012ACE900D56C99 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F276EAE94A61FFC2E3438F0A /* Pods-neoNetwork.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

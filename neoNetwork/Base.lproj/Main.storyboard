@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,60 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="neoNetwork" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dh-xJ-oyo">
+                                <rect key="frame" x="74" y="48" width="50.5" height="29"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NEO-logo" translatesAutoresizingMaskIntoConstraints="NO" id="1So-ZT-ZpZ">
+                                <rect key="frame" x="24" y="46" width="40" height="48"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6WP-xT-Wo2">
+                                <rect key="frame" x="145" y="115" width="85" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
+                                <color key="textColor" red="0.86657208204269409" green="0.86672115325927734" blue="0.86656266450881958" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vU-Ke-eQx">
+                                <rect key="frame" x="281.5" y="46" width="79" height="31"/>
+                                <state key="normal" title="Button" image="USD-highlight"/>
+                                <connections>
+                                    <action selector="currencyButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ovs-vw-t4m"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.094117647058823528" green="0.10588235294117647" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1So-ZT-ZpZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="46" id="FbO-EV-UE3"/>
+                            <constraint firstItem="6WP-xT-Wo2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="95" id="JG4-v3-FNG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4vU-Ke-eQx" secondAttribute="trailing" constant="14.5" id="UsO-J2-Iel"/>
+                            <constraint firstItem="6WP-xT-Wo2" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Xmk-nU-Gfw"/>
+                            <constraint firstItem="1So-ZT-ZpZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="eEQ-RM-GLZ"/>
+                            <constraint firstItem="4vU-Ke-eQx" firstAttribute="leading" secondItem="9dh-xJ-oyo" secondAttribute="trailing" constant="157" id="hE9-p7-uRy"/>
+                            <constraint firstItem="9dh-xJ-oyo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="48" id="ihG-SQ-sfi"/>
+                            <constraint firstItem="9dh-xJ-oyo" firstAttribute="leading" secondItem="1So-ZT-ZpZ" secondAttribute="trailing" constant="10" id="jNy-JQ-Xhh"/>
+                            <constraint firstItem="4vU-Ke-eQx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="46" id="nj0-5w-rnO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9dh-xJ-oyo" secondAttribute="trailing" constant="250.5" id="pQl-gz-65l"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="neoPriceLabel" destination="6WP-xT-Wo2" id="Wtf-yY-9SV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="NEO-logo" width="40" height="48"/>
+        <image name="USD-highlight" width="174" height="78"/>
+    </resources>
 </document>
