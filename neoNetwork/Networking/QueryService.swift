@@ -92,7 +92,7 @@ class QueryService {
     
     func retrieveNEOChartData(currentVC:ViewController) {
         
-        let urlString = "https://min-api.cryptocompare.com/data/histohour?fsym=NEO&tsym=USD&limit=24&aggregate=3&e=CCCAGG"
+        let urlString = "https://min-api.cryptocompare.com/data/histominute?fsym=NEO&tsym=USD&limit=480&aggregate=3&e=CCCAGG"
         guard let url = URL(string: urlString) else { return }
         
         URLSession.shared.dataTask(with: url) { (data, response, error) in

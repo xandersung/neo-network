@@ -110,7 +110,17 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ag1-YT-QQ8" customClass="LineChartView" customModule="Charts">
                                         <rect key="frame" x="0.0" y="182" width="375" height="186"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="cTA-Jb-guV" appends="YES" id="yJ0-YE-YCR"/>
+                                        </connections>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9H-2d-zmT">
+                                        <rect key="frame" x="363" y="169" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -130,6 +140,7 @@
                                     <constraint firstItem="g8D-qw-vO9" firstAttribute="leading" secondItem="58k-ho-LbF" secondAttribute="leading" id="rhP-XN-I07"/>
                                     <constraint firstItem="ULB-Ia-Sv5" firstAttribute="centerY" secondItem="ag1-YT-QQ8" secondAttribute="centerY" id="stH-vl-ghX"/>
                                     <constraint firstItem="ag1-YT-QQ8" firstAttribute="leading" secondItem="58k-ho-LbF" secondAttribute="leading" id="uCu-b5-sWZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="e9H-2d-zmT" secondAttribute="trailing" constant="12" id="wvN-tC-roB"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="subviews">
@@ -340,6 +351,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="W23-gW-OYL" secondAttribute="bottom" id="IWv-gB-sT3"/>
                             <constraint firstItem="6WP-xT-Wo2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="JG4-v3-FNG"/>
                             <constraint firstItem="Ow1-4A-cL6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="-30" id="KCb-eA-gvv"/>
+                            <constraint firstItem="e9H-2d-zmT" firstAttribute="centerY" secondItem="txi-7S-bPc" secondAttribute="centerY" id="Nry-q9-lUW"/>
                             <constraint firstItem="58k-ho-LbF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RJM-To-01t"/>
                             <constraint firstItem="1So-ZT-ZpZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="RZk-rr-WLP"/>
                             <constraint firstItem="Uvs-wd-dTF" firstAttribute="top" secondItem="cjm-Bv-6e5" secondAttribute="bottom" id="TD6-N0-Avb"/>
@@ -368,9 +380,15 @@
                         <outlet property="neoPriceLabel" destination="6WP-xT-Wo2" id="Wtf-yY-9SV"/>
                         <outlet property="neoPriceLineChartView" destination="ag1-YT-QQ8" id="f3v-Fu-6P1"/>
                         <outlet property="nep5CollectionView" destination="cjm-Bv-6e5" id="LcZ-Uu-7cP"/>
+                        <outlet property="selectedTimeLabel" destination="e9H-2d-zmT" id="1ij-YD-BiD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="cTA-Jb-guV">
+                    <connections>
+                        <action selector="chartViewTapped:" destination="BYZ-38-t0r" id="wIa-lb-1ef"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="32.512315270935964"/>
         </scene>

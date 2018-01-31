@@ -18,6 +18,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     @IBOutlet weak var neoDeltaLabel: UILabel!
     private var usdPrice: String!
     private var displayUSD = true
+    @IBOutlet weak var selectedTimeLabel: UILabel!
     var neoData: Coin! {
         didSet {
             updateNeoPrice()
@@ -100,11 +101,20 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         print(entry)
         print(highlight)
         neoPriceLabel.text = "$" + String(highlight.y)
+        let date = Date(timeIntervalSince1970: highlight.x)
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone(abbreviation: "PST") //Set timezone that you want
+        dateFormatter.locale = NSLocale.current
+        dateFormatter.dateFormat = "h:mm a" //Specify your format that you want
+        let strDate = dateFormatter.string(from: date)
+        selectedTimeLabel.text = strDate
     }
     
     func chartValueNothingSelected(_ chartView: ChartViewBase) {
         updateNeoPrice()
+        selectedTimeLabel.text = ""
     }
+    
     
     func lineChartUpdate() {
         if let dataSet = neoChartSet {
@@ -134,7 +144,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         self.nep5CollectionView.reloadData()
     }
 
-
+    @IBAction func chartViewTapped(_ sender: Any) {
+        neoPriceLineChartView.highlightValues(nil)
+        updateNeoPrice()
+        selectedTimeLabel.text = ""
+    }
     
     @IBAction func currencyButton(_ sender: UIButton) {
         if displayUSD {
