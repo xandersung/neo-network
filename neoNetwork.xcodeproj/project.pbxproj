@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		C00F88FC2016A23100EF77C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C00F88FB2016A23100EF77C0 /* Assets.xcassets */; };
+		C00F89002019D2DA00EF77C0 /* ICOCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00F88FF2019D2DA00EF77C0 /* ICOCell.swift */; };
+		C08CF127201ACB1300E8C927 /* NEP5Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08CF126201ACB1300E8C927 /* NEP5Cell.swift */; };
 		C0A27CA82013510C00F5B94F /* QueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A27CA72013510C00F5B94F /* QueryService.swift */; };
 		C0A27CAD2013E99A00F5B94F /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A27CAC2013E99A00F5B94F /* CoinModel.swift */; };
+		C0D67D90202080CC00A00551 /* ChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D67D8F202080CC00A00551 /* ChartModel.swift */; };
 		C0FEE1812012ACE900D56C99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FEE1802012ACE900D56C99 /* AppDelegate.swift */; };
 		C0FEE1832012ACE900D56C99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FEE1822012ACE900D56C99 /* ViewController.swift */; };
 		C0FEE1862012ACE900D56C99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0FEE1842012ACE900D56C99 /* Main.storyboard */; };
@@ -40,8 +43,11 @@
 /* Begin PBXFileReference section */
 		1569A03B4695DEDD7BE51264 /* Pods_neoNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_neoNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C00F88FB2016A23100EF77C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C00F88FF2019D2DA00EF77C0 /* ICOCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICOCell.swift; sourceTree = "<group>"; };
+		C08CF126201ACB1300E8C927 /* NEP5Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NEP5Cell.swift; sourceTree = "<group>"; };
 		C0A27CA72013510C00F5B94F /* QueryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryService.swift; sourceTree = "<group>"; };
 		C0A27CAC2013E99A00F5B94F /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
+		C0D67D8F202080CC00A00551 /* ChartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartModel.swift; sourceTree = "<group>"; };
 		C0FEE17D2012ACE900D56C99 /* neoNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = neoNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0FEE1802012ACE900D56C99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0FEE1822012ACE900D56C99 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				C0A27CAC2013E99A00F5B94F /* CoinModel.swift */,
+				C0D67D8F202080CC00A00551 /* ChartModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -143,6 +150,8 @@
 				C0FEE1842012ACE900D56C99 /* Main.storyboard */,
 				C0FEE1892012ACE900D56C99 /* LaunchScreen.storyboard */,
 				C0FEE18C2012ACE900D56C99 /* Info.plist */,
+				C00F88FF2019D2DA00EF77C0 /* ICOCell.swift */,
+				C08CF126201ACB1300E8C927 /* NEP5Cell.swift */,
 			);
 			path = neoNetwork;
 			sourceTree = "<group>";
@@ -314,11 +323,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-neoNetwork/Pods-neoNetwork-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -365,10 +374,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C08CF127201ACB1300E8C927 /* NEP5Cell.swift in Sources */,
 				C0A27CAD2013E99A00F5B94F /* CoinModel.swift in Sources */,
+				C00F89002019D2DA00EF77C0 /* ICOCell.swift in Sources */,
 				C0A27CA82013510C00F5B94F /* QueryService.swift in Sources */,
 				C0FEE1AF2012CCDD00D56C99 /* Podfile in Sources */,
 				C0FEE1832012ACE900D56C99 /* ViewController.swift in Sources */,
+				C0D67D90202080CC00A00551 /* ChartModel.swift in Sources */,
 				C0FEE1812012ACE900D56C99 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

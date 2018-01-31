@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+struct ChartData: Codable {
+    let Response: String
+    let TimeTo: Int
+    let TimeFrom: Int
+    let Data: [PointData]
+}
+
+struct PointData: Codable {
+    let time: Int
+    let open: Double
+}
