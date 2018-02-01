@@ -92,7 +92,19 @@ class QueryService {
     
     func retrieveNEOChartData(currentVC:ViewController) {
         
-        let urlString = "https://min-api.cryptocompare.com/data/histominute?fsym=NEO&tsym=USD&limit=480&aggregate=3&e=CCCAGG"
+        self.currentVC = currentVC
+        
+        let urlStringUSD = "https://min-api.cryptocompare.com/data/histominute?fsym=NEO&tsym=USD&limit=480&aggregate=3&e=CCCAGG"
+        let urlStringBTC = "https://min-api.cryptocompare.com/data/histominute?fsym=NEO&tsym=BTC&limit=480&aggregate=3&e=CCCAGG"
+        
+        getChartData(urlString: urlStringUSD, isUSD: true)
+        getChartData(urlString: urlStringBTC, isUSD: false)
+        
+        
+    }
+    
+    func getChartData(urlString: String, isUSD: Bool) {
+        
         guard let url = URL(string: urlString) else { return }
         
         URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -111,19 +123,17 @@ class QueryService {
                     print(chartData.Data)
                     var dataValueArray: [ChartDataEntry] = []
                     var counter = 0
+                    // todo use func programming
                     for point in chartData.Data {
                         dataValueArray.append(ChartDataEntry(x: Double(point.time), y: point.open))
-                        //y: Double(point.time)
                         counter = counter + 1
                     }
-//                    while counter < 25 {
-//                        dataValueArray.append(ChartDataEntry(x:Double(counter) ,y:chartData.Data[counter].open / 100))
-//                        //y: Double(point.time)
-//                        counter = counter + 1
-//                    }
                     let dataSet = LineChartDataSet(values: dataValueArray, label: "Neo")
-                    currentVC.neoChartSet = dataSet
-//                    currentVC.neoData = coinData[0]
+                    if isUSD {
+                        self.currentVC.neoChartSetUSD = dataSet
+                    } else {
+                        self.currentVC.neoChartSetBTC = dataSet
+                    }
                 }
                 
             } catch let jsonError {

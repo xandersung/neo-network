@@ -105,10 +105,10 @@
                                         </constraints>
                                     </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line" translatesAutoresizingMaskIntoConstraints="NO" id="ULB-Ia-Sv5">
-                                        <rect key="frame" x="-372" y="269" width="1119" height="12"/>
+                                        <rect key="frame" x="-372" y="269.66666666666669" width="1119" height="12"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ag1-YT-QQ8" customClass="LineChartView" customModule="Charts">
-                                        <rect key="frame" x="0.0" y="182" width="375" height="186"/>
+                                        <rect key="frame" x="-10" y="177" width="395" height="196"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <gestureRecognizers/>
                                         <connections>
@@ -131,15 +131,15 @@
                                     <constraint firstAttribute="trailing" secondItem="g8D-qw-vO9" secondAttribute="trailing" id="MCN-e5-zd1"/>
                                     <constraint firstItem="ULB-Ia-Sv5" firstAttribute="centerX" secondItem="ag1-YT-QQ8" secondAttribute="centerX" id="ehD-pr-snf"/>
                                     <constraint firstAttribute="height" constant="400" id="joO-jH-BYA"/>
-                                    <constraint firstAttribute="trailing" secondItem="ag1-YT-QQ8" secondAttribute="trailing" id="lRf-bh-qsz"/>
+                                    <constraint firstAttribute="trailing" secondItem="ag1-YT-QQ8" secondAttribute="trailing" constant="-10" id="lRf-bh-qsz"/>
                                     <constraint firstItem="OLf-nv-ghy" firstAttribute="leading" secondItem="58k-ho-LbF" secondAttribute="leading" id="mVC-D7-zUC"/>
-                                    <constraint firstItem="g8D-qw-vO9" firstAttribute="top" secondItem="ag1-YT-QQ8" secondAttribute="bottom" id="mYg-C1-SRi"/>
+                                    <constraint firstItem="g8D-qw-vO9" firstAttribute="top" secondItem="ag1-YT-QQ8" secondAttribute="bottom" constant="-5" id="mYg-C1-SRi"/>
                                     <constraint firstItem="g8D-qw-vO9" firstAttribute="top" secondItem="OLf-nv-ghy" secondAttribute="bottom" id="mb9-mz-zHG"/>
-                                    <constraint firstItem="ag1-YT-QQ8" firstAttribute="top" secondItem="58k-ho-LbF" secondAttribute="top" constant="182" id="mlb-SI-bwZ"/>
+                                    <constraint firstItem="ag1-YT-QQ8" firstAttribute="top" secondItem="58k-ho-LbF" secondAttribute="top" constant="177" id="mlb-SI-bwZ"/>
                                     <constraint firstItem="ULB-Ia-Sv5" firstAttribute="trailing" secondItem="OLf-nv-ghy" secondAttribute="trailing" id="prC-of-uZm"/>
                                     <constraint firstItem="g8D-qw-vO9" firstAttribute="leading" secondItem="58k-ho-LbF" secondAttribute="leading" id="rhP-XN-I07"/>
                                     <constraint firstItem="ULB-Ia-Sv5" firstAttribute="centerY" secondItem="ag1-YT-QQ8" secondAttribute="centerY" id="stH-vl-ghX"/>
-                                    <constraint firstItem="ag1-YT-QQ8" firstAttribute="leading" secondItem="58k-ho-LbF" secondAttribute="leading" id="uCu-b5-sWZ"/>
+                                    <constraint firstItem="ag1-YT-QQ8" firstAttribute="leading" secondItem="58k-ho-LbF" secondAttribute="leading" constant="-10" id="uCu-b5-sWZ"/>
                                     <constraint firstAttribute="trailing" secondItem="e9H-2d-zmT" secondAttribute="trailing" constant="12" id="wvN-tC-roB"/>
                                 </constraints>
                                 <variation key="default">
@@ -241,7 +241,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="See All" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OrH-n5-rcE">
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="See All" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OrH-n5-rcE">
                                         <rect key="frame" x="324" y="8.3333333333333712" width="39" height="14.333333333333336"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" red="0.49269336460000002" green="0.70450264220000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -379,6 +379,7 @@
                         <outlet property="neoDeltaLabel" destination="Ow1-4A-cL6" id="SRH-QR-btl"/>
                         <outlet property="neoPriceLabel" destination="6WP-xT-Wo2" id="Wtf-yY-9SV"/>
                         <outlet property="neoPriceLineChartView" destination="ag1-YT-QQ8" id="f3v-Fu-6P1"/>
+                        <outlet property="neoTimeLabel" destination="txi-7S-bPc" id="X8G-R7-Zwy"/>
                         <outlet property="nep5CollectionView" destination="cjm-Bv-6e5" id="LcZ-Uu-7cP"/>
                         <outlet property="selectedTimeLabel" destination="e9H-2d-zmT" id="1ij-YD-BiD"/>
                     </connections>

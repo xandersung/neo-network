@@ -16,6 +16,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     @IBOutlet weak var nep5CollectionView: UICollectionView!
     @IBOutlet weak var neoPriceLabel: UILabel!
     @IBOutlet weak var neoDeltaLabel: UILabel!
+    @IBOutlet weak var neoTimeLabel: UILabel!
     private var usdPrice: String!
     private var displayUSD = true
     @IBOutlet weak var selectedTimeLabel: UILabel!
@@ -31,7 +32,18 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             }
         }
     }
-    var neoChartSet: LineChartDataSet? {
+    var neoChartSetUSD: LineChartDataSet? {
+        didSet {
+            currentChartData = neoChartSetUSD
+            lineChartUpdate()
+        }
+    }
+    var neoChartSetBTC: LineChartDataSet? {
+        didSet {
+            lineChartUpdate()
+        }
+    }
+    var currentChartData: LineChartDataSet? {
         didSet {
             lineChartUpdate()
         }
@@ -69,9 +81,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func updateNeoPrice() {
-        let neoPrice = Double(neoData.price_usd)
+        let neoPrice = Double(displayUSD ? neoData.price_usd : neoData.price_btc)
         let neoDelta = neoData.percent_change_24h
-        neoPriceLabel.text = "$" + String(format:"%.2f", neoPrice!)
+        neoPriceLabel.text = displayUSD ? "$" + String(format:"%.2f", neoPrice!) : "฿" + String(format:"%.5f", neoPrice!)
         neoDeltaLabel.text = neoDelta + "%"
         if neoDelta[neoDelta.startIndex] == "-" {
             neoDeltaLabel.textColor = UIColor.red
@@ -85,12 +97,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         neoPriceLineChartView.chartDescription?.textColor = UIColor.white
         neoPriceLineChartView.legend.enabled = false
         neoPriceLineChartView.leftAxis.enabled = false
-        neoPriceLineChartView.leftAxis.spaceTop = 0.4
-        neoPriceLineChartView.leftAxis.spaceBottom = 0.4
+        neoPriceLineChartView.leftAxis.spaceTop = 0.1
+        neoPriceLineChartView.leftAxis.spaceBottom = 0.1
         neoPriceLineChartView.rightAxis.enabled = false
         neoPriceLineChartView.xAxis.enabled = false
         neoPriceLineChartView.highlightPerTapEnabled = true
         neoPriceLineChartView.doubleTapToZoomEnabled = false
+        neoPriceLineChartView.drawBordersEnabled = true
         neoPriceLineChartView.setNeedsLayout()
         
     }
@@ -100,14 +113,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
         print(entry)
         print(highlight)
-        neoPriceLabel.text = "$" + String(highlight.y)
+        neoPriceLabel.text = displayUSD ? "$" + String(highlight.y) : "฿" + String(highlight.y)
         let date = Date(timeIntervalSince1970: highlight.x)
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = TimeZone(abbreviation: "PST") //Set timezone that you want
         dateFormatter.locale = NSLocale.current
         dateFormatter.dateFormat = "h:mm a" //Specify your format that you want
         let strDate = dateFormatter.string(from: date)
-        selectedTimeLabel.text = strDate
+        neoTimeLabel.text = strDate
     }
     
     func chartValueNothingSelected(_ chartView: ChartViewBase) {
@@ -117,7 +130,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     
     func lineChartUpdate() {
-        if let dataSet = neoChartSet {
+        if let dataSet = currentChartData {
             // update set UI
             dataSet.drawValuesEnabled = false
             dataSet.valueTextColor = .white
@@ -127,6 +140,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             dataSet.setCircleColor(.white)
             dataSet.highlightColor = .white
             dataSet.drawHorizontalHighlightIndicatorEnabled = false
+//            dataSet.drawFilledEnabled = true
             
             let data = LineChartData(dataSets: [dataSet])
             neoPriceLineChartView.data = data
@@ -147,21 +161,26 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     @IBAction func chartViewTapped(_ sender: Any) {
         neoPriceLineChartView.highlightValues(nil)
         updateNeoPrice()
-        selectedTimeLabel.text = ""
+        neoTimeLabel.text = "24 hr"
     }
     
     @IBAction func currencyButton(_ sender: UIButton) {
         if displayUSD {
+            currentChartData = neoChartSetBTC
+            lineChartUpdate()
             sender.setImage(#imageLiteral(resourceName: "BTC-highlight"), for: .normal)
             displayUSD = false
-            neoPriceLabel.text = "฿" + neoData.price_btc
+            let neoPrice = Double(neoData.price_btc)
+            neoPriceLabel.text = "฿" + String(format:"%.4f", neoPrice!)
         } else {
             sender.setImage(#imageLiteral(resourceName: "USD-highlight"), for: .normal)
-            displayUSD = true
+            currentChartData = neoChartSetUSD
+            lineChartUpdate()
             
             //todo refactor
             let neoPrice = Double(neoData.price_usd)
             neoPriceLabel.text = "$" + String(format:"%.2f", neoPrice!)
+            displayUSD = true
         }
         self.nep5CollectionView.reloadData()
     }
